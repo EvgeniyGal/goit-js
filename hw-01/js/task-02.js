@@ -4,10 +4,8 @@ const ordered = 50;
 console.group('Task-02');
 
 function checkOrder(order) {
-  if (order > TOTAL) {
-    return 'На складе недостаточно твоаров!';
-  }
-  return 'Заказ оформлен, с вами свяжется менеджер.';
+  return (order > TOTAL) ? 'На складе недостаточно твоаров!'
+    : 'Заказ оформлен, с вами свяжется менеджер.';
 }
 
 console.assert(
@@ -22,12 +20,9 @@ console.assert(
 console.log(checkOrder(ordered));
 
 // It's my extention with prompt) to test code with different value of ordered
-
 function checkOrderExtend(order) {
-  if (order > TOTAL) {
-    return `На складе нет ${order} единиц твовара!`;
-  }
-  return `Вы заказали ${order} единиц товара, с вами свяжется менеджер.`;
+  return (order > TOTAL) ? `На складе нет ${order} единиц твовара!`
+    : `Вы заказали ${order} единиц товара, с вами свяжется менеджер.`;
 }
 
 console.assert(
@@ -60,4 +55,4 @@ do {
   }
 } while (isCancel === 0);
 
-console.groupEnd('Task-02');
+console.groupEnd();
