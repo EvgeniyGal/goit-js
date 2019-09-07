@@ -1,5 +1,5 @@
 function formatString(string) {
-  if (String(string).length > 40) {
+  if (string.length > 40) {
     return `${String(string).slice(0, 40)}...`;
   }
   return string;
