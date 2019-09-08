@@ -21,15 +21,6 @@ const addLogin = function addLogin(allLogins, login) {
 
 console.group('Task-08');
 
-console.assert(addLogin(logins, 'DevTools') === 'Логин успешно добавлен!',
-  'ERROR: When login valid and unique but dont add');
-console.assert(addLogin(logins, 'robotGoogles') === 'Такой логин уже используется!',
-  'ERROR: When login isnt unique');
-console.assert(addLogin(logins, 'Zod') === 'Ошибка! Логин должен быть от 4 до 16 символов',
-  'ERROR: When login is short');
-console.assert(addLogin(logins, 'jqueryisextremelyfast') === 'Ошибка! Логин должен быть от 4 до 16 символов',
-  'ERROR: When login is short');
-
 console.log(addLogin(logins, 'Ajax'));
 console.log(addLogin(logins, 'robotGoogles'));
 console.log(addLogin(logins, 'Zod'));
