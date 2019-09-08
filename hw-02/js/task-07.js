@@ -32,9 +32,6 @@ function calcTotal(numberArr) {
 
 console.group('Task-07');
 
-console.assert(calcTotal([5, 9, 3]) === 17, 'ERROR: Somthing wrong in calculeting total');
-console.assert(calcTotal([]) === 0, 'ERROR: Somthing wrong when empty array');
-
 total = calcTotal(numbers);
 
 console.log(`Общая сумма чисел равна ${total}`);

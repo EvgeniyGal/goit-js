@@ -1,5 +1,7 @@
 function findLongestWord(string) {
-  if (string === '') return '';
+  if (string === '') {
+    return '';
+  }
   const wordArr = string.split(' ');
   let longestWord = '';
   wordArr.forEach((element) => {
@@ -9,9 +11,6 @@ function findLongestWord(string) {
 }
 
 console.group('Task-04');
-
-console.assert(findLongestWord('My name is Evgeniy') === 'Evgeniy', 'ERROR: When choose longest word');
-console.assert(findLongestWord('') === '', 'ERROR: When empty choose longest word');
 
 console.log(findLongestWord('The quick brown fox jumped over the lazy dog')); // 'jumped'
 

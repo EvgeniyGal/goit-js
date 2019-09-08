@@ -7,11 +7,6 @@ function formatString(string) {
 
 console.group('Task-05');
 
-console.assert(formatString('Curabitur ligula sapien, tincidunt non.')
-=== 'Curabitur ligula sapien, tincidunt non.', 'ERROR: When string < 40 chars');
-console.assert(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.')
-=== 'Vestibulum facilisis, purus nec pulvinar...', 'ERROR: When string > 40 chars');
-
 console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
 // вернется оригинальная строка
 
@@ -21,10 +16,7 @@ console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
 console.log(formatString('Curabitur ligula sapien.'));
 // вернется оригинальная строка
 
-console.log(
-  formatString(
-    'Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.',
-  ),
-);
+console.log(formatString('Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.'));
+// вернется форматированная строка
 
 console.groupEnd();
