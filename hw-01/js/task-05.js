@@ -2,14 +2,12 @@
 const userCountry = prompt('Введите вашу страну для расчета доставки!');
 
 function correctCountry(country) {
-  if (country === null || country === '') { return null; }
+  if (country === null || country === '') {
+    return null;
+  }
   return country.substring(0, 1).toUpperCase()
   + country.substring(1, country.length).toLowerCase();
 }
-
-console.assert(correctCountry('lIsAbOn') === 'Lisabon', 'ERROR: Something wrong with cerrect string');
-console.assert(correctCountry('') === null, 'ERROR: Something wrong with condition empty string');
-console.assert(correctCountry(null) === null, 'ERROR: Something wrong with null condition');
 
 const userCountryCorrect = correctCountry(userCountry);
 

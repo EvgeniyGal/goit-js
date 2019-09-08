@@ -15,7 +15,11 @@ function parsInput(userInput) {
 do {
   // eslint-disable-next-line no-alert
   input = prompt('Введите любое число!');
-  if (input === null) { isCancel = 1; } else { parsInput(input); }
+  if (input === null) {
+    isCancel = 1;
+  } else {
+    parsInput(input);
+  }
 } while (isCancel === 0);
 
 // eslint-disable-next-line no-alert

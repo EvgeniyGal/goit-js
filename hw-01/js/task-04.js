@@ -7,18 +7,17 @@ let totalPrice;
 console.group('Task-04');
 
 function checkOrder(order) {
-  if (order === null) { return 'Отменено пользователем!'; }
+  if (order === null) {
+    return 'Отменено пользователем!';
+  }
 
   const orderNumber = Number.parseInt(order, 10);
   totalPrice = pricePerDroid * orderNumber;
-  return (totalPrice > credits) ? 'Недостаточно средств на счету!'
-    : `Вы купили ${orderNumber} дроидов, на счету осталось ${credits - totalPrice} кредитов.`;
+  if (totalPrice > credits) {
+    return 'Недостаточно средств на счету!';
+  }
+  return `Вы купили ${orderNumber} дроидов, на счету осталось ${credits - totalPrice} кредитов.`;
 }
-
-console.assert(checkOrder(null) === 'Отменено пользователем!', 'ERROR: When user is cancel');
-console.assert(checkOrder('3') === 'Вы купили 3 дроидов, на счету осталось 14500 кредитов.',
-  'ERROR: When totalPrice < credits');
-console.assert(checkOrder('8') === 'Недостаточно средств на счету!', 'ERROR: When totalPrice > credits');
 
 console.log(checkOrder(oderedDroid));
 
