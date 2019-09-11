@@ -18,22 +18,36 @@ do {
   }
 } while (isCancel === 0);
 
+// function calcTotal(numberArr) {
+//   if (numberArr.length === 0) {
+//     return 0;
+//   }
+//   let tempTotal = 0;
+//   // eslint-disable-next-line no-plusplus
+//   numberArr.forEach((element) => {
+//     tempTotal += element;
+//   });
+//   return tempTotal;
+// }
+// total = calcTotal(numbers);
+
 function calcTotal(numberArr) {
   if (numberArr.length === 0) {
     return 0;
   }
-  let tempTotal = 0;
-  // eslint-disable-next-line no-plusplus
-  numberArr.forEach((element) => {
-    tempTotal += element;
-  });
-  return tempTotal;
+  for (let i = 0; i < numberArr.length; i++) {
+    total += numberArr[i];
+  }
+  return total;
 }
 
 console.group('Task-07');
 
-total = calcTotal(numbers);
+console.log(`Общая сумма чисел равна ${calcTotal(numbers)}`);
 
-console.log(`Общая сумма чисел равна ${total}`);
+if (numbers.length !== 0) {
+  console.log('Самый компактный вариант с callback функцией (numbers.reduce((a, b) => a + b))): ',
+    numbers.reduce((a, b) => a + b));
+}
 
 console.groupEnd();
