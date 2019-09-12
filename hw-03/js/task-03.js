@@ -1,14 +1,15 @@
 function findBestEmployee(employees) {
+  let bestEmpl = 0;
+  const employArr = Object.entries(employees);
+  for (let i = 1; i < employArr.length; i++) {
+    if (employArr[i][1] > employArr[bestEmpl][1]) {
+      bestEmpl = i;
+    }
+  }
+  return `${employArr[bestEmpl][0]}: ${employArr[bestEmpl][1]}`;
 }
 
-
-// Задание 3
-// Напиши функцию findBestEmployee(employees), которая
-// принимает объект сотрудников и возвращает имя самого продуктивного
-// (который выполнил больше всех задач). Сотрудники и кол-во выполненых
-// задач содержатся как свойства объекта в формате "имя":"кол-во задач".
-
-// Вызовы функции для проверки работоспособности твоей реализации.
+console.group('Task-03');
 
 console.log(
   findBestEmployee({
@@ -35,3 +36,5 @@ console.log(
     chelsy: 38,
   }),
 ); // lux
+
+console.groupEnd();

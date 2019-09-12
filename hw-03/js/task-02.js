@@ -1,5 +1,5 @@
-function countProps(odj) {
-  return Object.keys(odj).length;
+function countProps(obj) {
+  return Object.keys(obj).length;
 }
 console.group('Task-02');
 
