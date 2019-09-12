@@ -66,12 +66,7 @@ const account = {
   //    * Метод ищет и возвращает объект транзации по id
   //    */
   getTransactionDetails(id) {
-    for (let i = 0; i < this.transactions.length; i++) {
-      if (this.transactions[i].id === id) {
-        return this.transactions[i];
-      }
-    }
-    return null;
+    return this.transactions.find((element) => element.id === id);
   },
 
   //   /*
@@ -79,13 +74,7 @@ const account = {
   //    * определенного типа транзакции из всей истории транзакций
   //    */
   getTransactionTotal(type) {
-    let totalForType = 0;
-    this.transactions.forEach((element) => {
-      if (element.type === type) {
-        totalForType += element.amount;
-      }
-    });
-    return totalForType;
+    return this.transactions.reduce((a, b) => (b.type === type ? a + b.amount : a), 0);
   },
 };
 
