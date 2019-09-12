@@ -38,7 +38,14 @@ const account = {
   //    * Если amount больше чем текущий баланс, выводи сообщение
   //    * о том, что снятие такой суммы не возможно, недостаточно средств.
   //    */
-  withdraw(amount) {},
+  withdraw(amountTrans) {
+    this.addTransaction({
+      id: this.transactions.length,
+      type: Transaction.WITHDRAW,
+      amount: amountTrans,
+    });
+    this.balance -= amountTrans;
+  },
 
   //   /*
   //    * Метод добавляющий транзацию в свойство transactions
@@ -71,5 +78,26 @@ const account = {
   //    * Метод возвращает количество средств
   //    * определенного типа транзакции из всей истории транзакций
   //    */
-  getTransactionTotal(type) {},
+  getTransactionTotal(type) {
+    let totalForType = 0;
+    this.transactions.forEach((element) => {
+      if (element.type === type) {
+        totalForType += element.amount;
+      }
+    });
+    return totalForType;
+  },
 };
+
+console.group('Task-07');
+
+account.deposit(26000.25);
+account.deposit(4000.75);
+account.withdraw(6000.50);
+account.withdraw(3000.50);
+
+console.log(account.getBalance()); // 21000
+console.log(account.getTransactionDetails(2)); // {id: 2, type: withdarw, amount: 6000.5}
+console.log(account.getTransactionTotal(Transaction.DEPOSIT)); // 30000.1
+
+console.groupEnd();
