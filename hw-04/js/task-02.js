@@ -13,12 +13,12 @@ const invokeInventoryOperation = function invokeInventoryOperation(itemName, inv
   inventoryAction(itemName);
 };
 
-invokeInventoryOperation('Аптечка', inventory.add);
-// Invoking add opeartion on Аптечка
+invokeInventoryOperation('Аптечка', inventory.add.bind(inventory));
+// // Invoking add opeartion on Аптечка
 
 console.log(inventory.items); // ['Монорельса', 'Фильтр', 'Аптечка']
 
-invokeInventoryOperation('Фильтр', inventory.remove);
-// Invoking remove opeartion on Фильтр
+invokeInventoryOperation('Фильтр', inventory.remove.bind(inventory));
+// // Invoking remove opeartion on Фильтр
 
 console.log(inventory.items); // ['Монорельса', 'Аптечка']
