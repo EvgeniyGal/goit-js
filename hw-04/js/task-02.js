@@ -8,7 +8,10 @@ const inventory = {
   },
 };
 
-const invokeInventoryOperation = function invokeInventoryOperation(itemName, inventoryAction) {
+const invokeInventoryOperation = function invokeInventoryOperation(
+  itemName,
+  inventoryAction,
+) {
   console.log(`Invoking ${inventoryAction.name} opeartion on ${itemName}`);
   inventoryAction(itemName);
 };
