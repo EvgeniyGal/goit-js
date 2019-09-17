@@ -16,6 +16,8 @@ const invokeInventoryOperation = function invokeInventoryOperation(
   inventoryAction(itemName);
 };
 
+console.group('Task-02');
+
 invokeInventoryOperation('Аптечка', inventory.add.bind(inventory));
 // // Invoking add opeartion on Аптечка
 
@@ -25,3 +27,5 @@ invokeInventoryOperation('Фильтр', inventory.remove.bind(inventory));
 // // Invoking remove opeartion on Фильтр
 
 console.log(inventory.items); // ['Монорельса', 'Аптечка']
+
+console.groupEnd();
