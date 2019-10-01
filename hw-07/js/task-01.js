@@ -1,3 +1,8 @@
+const list = document.getElementById('categories');
+
+const items = list.querySelectorAll('.item');
+
+console.log(`There are ${items.length} categories`);
 
 // Напиши скрипт, который выполнит следующие операции.
 
