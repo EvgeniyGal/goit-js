@@ -16,7 +16,9 @@ const images = [
   },
 ];
 
+const gallery = document.getElementById('gallery');
 
+gallery.classList.add('parent');
 // Задание 3
 // Напиши скрипт для создания галлереи изображений по
 // массиву данных.
