@@ -4,16 +4,8 @@ const items = list.querySelectorAll('.item');
 
 console.log(`There are ${items.length} categories`);
 
-// Напиши скрипт, который выполнит следующие операции.
-
-// Посчитает и выведет в консоль количество категорий в ul#categories,
-// то есть элементов li.item. Получится 'В списке 3 категории.'.
-
-// Для каждого элемента li.item в списке ul.list, найдет и выведет
-//  в консоль текст заголовка элемента (теге h2) и количество элементов
-//  в категории (всех вложенных в него элементов li).
-
-// Например для первой категории получится:
-
-// Категория: Животные
-// Количество элементов: 4
+items.forEach((element) => {
+  const headLine = element.querySelector('h2');
+  const itemsIner = element.querySelectorAll('li');
+  console.log(`Категория: ${headLine.textContent}\nКоличество элементов: ${itemsIner.length}`);
+});

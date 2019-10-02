@@ -7,12 +7,13 @@ mainTitle.textContent = 'Please choose task!';
 document.body.prepend(mainTitle);
 document.body.append(list);
 
+let insertHTML = '';
+
 for (let i = 0; i < 8; i++) {
-  list.insertAdjacentHTML(
-    'beforeend',
-    `<li><a href="./task-${`${i + 1}`.padStart(
-      2,
-      '0',
-    )}.html" target="_blank">Task-${`${i + 1}`.padStart(2, '0')}</a></li>`,
-  );
+  insertHTML = `${insertHTML}<li><a href="./task-${`${i + 1}`.padStart(2, '0')}.html" target="_blank">Task-${`${i + 1}`.padStart(2, '0')}</a></li>`;
 }
+
+list.insertAdjacentHTML(
+  'beforeend',
+  insertHTML,
+);
