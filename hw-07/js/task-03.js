@@ -19,6 +19,17 @@ const images = [
 const gallery = document.getElementById('gallery');
 
 gallery.classList.add('parent');
+
+let insertHTML = '';
+
+for (let i = 0; i < images.length; i++) {
+  insertHTML = `${insertHTML}<li class = "div${i + 1}"><img src="${
+    images[i].url
+  }" alt="${images[i].alt}"></li>`;
+}
+
+gallery.insertAdjacentHTML('afterbegin', insertHTML);
+
 // Задание 3
 // Напиши скрипт для создания галлереи изображений по
 // массиву данных.
