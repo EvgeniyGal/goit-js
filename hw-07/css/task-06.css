@@ -1,0 +1,7 @@
+.valid {
+  outline: 3px solid #4caf50;
+}
+
+.invalid {
+  outline: 3px solid #f44336;
+}
