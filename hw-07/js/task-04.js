@@ -2,25 +2,25 @@ const btnIncr = document.querySelector('button[data-action="increment"');
 const btnDecr = document.querySelector('button[data-action="decrement"');
 const outputValue = document.getElementById('value');
 
-class Counter {
-  constructor() {
-    this.count = 0;
-  }
+function Counter() {
+  let count = 0;
 
-  get getCount() {
-    return this.count;
-  }
+  return {
+    increment() {
+      // eslint-disable-next-line no-plusplus
+      return ++count;
+    },
 
-  increment() {
-    return ++this.count;
-  }
-
-  decrement() {
-    return --this.count;
-  }
+    decrement() {
+      // eslint-disable-next-line no-plusplus
+      return --count;
+    },
+  };
 }
 
-const counter = new Counter();
+const counter = Counter();
+
+counter.count = 100;
 
 function handleIncr() {
   outputValue.textContent = counter.increment();

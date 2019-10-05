@@ -6,6 +6,8 @@ console.log(`There are ${items.length} categories`);
 
 items.forEach((element) => {
   const headLine = element.querySelector('h2');
-  const itemsIner = element.querySelectorAll('li');
-  console.log(`Категория: ${headLine.textContent}\nКоличество элементов: ${itemsIner.length}`);
+  const inerItems = element.querySelectorAll('li');
+  console.log(
+    `Категория: ${headLine.textContent}\nКоличество элементов: ${inerItems.length}`,
+  );
 });
