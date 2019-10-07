@@ -25,3 +25,22 @@ img {
   height: 100%;
   object-fit: cover;
 }
+
+body > h2 {
+  text-align: center;
+}
+
+.div-task {
+  background-color: black;
+  height: 0.2rem;
+  padding: 2rem;
+  background-clip: content-box;
+}
+
+.valid {
+  outline: 3px solid #4caf50;
+}
+
+.invalid {
+  outline: 3px solid #f44336;
+}

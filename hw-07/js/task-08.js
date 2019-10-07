@@ -1,5 +1,6 @@
 const boxes = document.getElementById('boxes');
-const input = document.getElementsByTagName('input');
+const controls = document.getElementById('controls');
+const input = controls.firstElementChild;
 const render = document.querySelector('button[data-action="render"');
 const destroy = document.querySelector('button[data-action="destroy"');
 
@@ -12,7 +13,7 @@ function genColour() {
 
 function createBoxes() {
   let htmlCode = '';
-  for (let i = 0; i < input[0].value; i++) {
+  for (let i = 0; i < input.value; i++) {
     htmlCode = `${htmlCode}<div style="background-color: ${genColour()}; width: ${30
       + i * 10}px; height: ${30 + i * 10}px;"></div>`;
   }
