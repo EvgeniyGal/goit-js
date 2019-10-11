@@ -1,8 +1,9 @@
 import galleryItems from './gallery-items.js';
 
 const gallery = document.querySelector('.gallery');
-const galleryItemArr = [];
+const lightbox = document.querySelector('.lightbox');
 
+const galleryItemArr = [];
 galleryItems.forEach((element) => {
   const { preview, original, description } = element;
   const galleryItem = document.createElement('li');
@@ -27,6 +28,10 @@ galleryItems.forEach((element) => {
 });
 
 gallery.append(...galleryItemArr);
+
+function activateLightbox(event) {
+  lightbox.classList.add('.lightbox.is-open');
+}
 
 
 console.log(gallery);
