@@ -1,11 +1,10 @@
 import galleryItems from './gallery-items.js';
 
 const gallery = document.querySelector('.gallery');
-const lightbox = document.querySelector('.lightbox');
 
 const galleryItemArr = [];
-galleryItems.forEach((element) => {
-  const { preview, original, description } = element;
+
+galleryItems.forEach(({ preview, original, description }) => {
   const galleryItem = document.createElement('li');
   galleryItem.classList.add('gallery__item');
   const galleryItemLink = document.createElement('a');
@@ -29,11 +28,37 @@ galleryItems.forEach((element) => {
 
 gallery.append(...galleryItemArr);
 
-function activateLightbox(event) {
-  lightbox.classList.add('.lightbox.is-open');
+const lightbox = document.querySelector('.lightbox');
+const lightboxImage = document.querySelector('.lightbox___image');
+
+function openLightbox(event) {
+  const {
+    target: {
+      alt,
+      classList,
+      dataset: { source },
+    },
+  } = event;
+
+  if (classList.contains('gallery__image')) {
+    event.preventDefault();
+    lightboxImage.alt = alt;
+    lightboxImage.src = source;
+    lightbox.classList.add('is-open');
+  }
 }
 
+function closeLightbox({ target: { classList }, key }) {
+  if (
+    classList.contains('lightbox__content')
+    || classList.contains('lightbox__button')
+    || classList.contains('material-icons')
+    || key === 'Escape'
+  ) {
+    lightbox.classList.remove('is-open');
+  }
+}
 
-console.log(gallery);
-
-console.log(galleryItems);
+gallery.addEventListener('click', openLightbox);
+lightbox.addEventListener('click', closeLightbox);
+window.addEventListener('keydown', closeLightbox);
