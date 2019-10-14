@@ -56,6 +56,8 @@ function closeLightbox({ target: { classList }, key }) {
     || key === 'Escape'
   ) {
     lightbox.classList.remove('is-open');
+    lightboxImage.alt = '';
+    lightboxImage.src = '';
   }
 }
 
