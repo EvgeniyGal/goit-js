@@ -1,0 +1,102 @@
+@import "./syle_reset.css";
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.header-block {
+  padding-top: 72px;
+  margin-bottom: 98px;
+}
+
+.menu {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.menu__item {
+  display: inline-block;
+  margin-right: 120px;
+}
+
+.menu__item:last-child {
+  margin-right: 0px;
+}
+
+.menu a:hover,
+.menu a:focus {
+  color: #03a9f4;
+}
+
+.isActive {
+  color: #03a9f4;
+}
+
+.menu__link {
+  color: #626262;
+  text-decoration: none;
+  text-transform: uppercase;
+  font: 14px "Playfair Display", serif;
+}
+
+.main-block {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 420px;
+  margin-bottom: 56px;
+}
+
+.article {
+  margin-bottom: 134px;
+  width: 420px;
+}
+
+.article:nth-child(odd) {
+  margin-right: 60px;
+}
+
+.article:nth-last-child(-n + 2) {
+  margin-bottom: 0px;
+}
+
+.article__image {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.article__type {
+  margin-bottom: 28px;
+  text-transform: uppercase;
+  color: #b4ad9e;
+  font: 14px "Ubuntu", sans-serif;
+}
+
+.article__headline {
+  margin-bottom: 38px;
+  color: #626262;
+  font-size: 30px;
+}
+
+.article__text {
+  line-height: 24px;
+  color: #626262;
+  font-size: 14px;
+}
+
+.footer {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.footer__btn {
+  width: 162px;
+  height: 60px;
+  color: #626262;
+  font-size: 20px;
+}
+
+.footer__btn:hover,
+.footer__btn:focus {
+  color: #03a9f4;
+}
