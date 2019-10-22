@@ -1,7 +1,5 @@
 import './styles.css';
-
 import menuTemplate from './menu.hbs';
-
 import menuData from './menu.json';
 
 const Theme = {
@@ -43,4 +41,3 @@ refs.switch.addEventListener('click', changeThem);
 const markup = menuData.reduce((acc, e) => acc + menuTemplate(e), '');
 
 refs.menu.innerHTML = markup;
-console.log(markup);
