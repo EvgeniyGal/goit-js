@@ -15,7 +15,7 @@ const refs = {
 
 const savedThem = localStorage.getItem('theme');
 
-if (savedThem === undefined) {
+if (savedThem === null) {
   localStorage.setItem('theme', Theme.LIGHT);
   refs.body.classList.add('light-theme');
 } else if (savedThem === Theme.LIGHT) {
