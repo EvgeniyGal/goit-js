@@ -13,7 +13,8 @@ const changeBodyColor = () => {
 
 let timer = null;
 
-const startChangeColor = () => { timer = setInterval(changeBodyColor, 1000); };
+const startChangeColor = () => { timer = setInterval(changeBodyColor, 100
+  0); };
 
 const stopChangeColor = () => { clearInterval(timer); };
 
