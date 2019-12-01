@@ -1,0 +1,12 @@
+html {
+  font-size: 10px;
+}
+.title {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.target-date {
+  display: flex;
+  justify-content: center;
+}
