@@ -8,10 +8,61 @@
   </head>
 
   <body>
-    <h1 class="title">Count down timer</h1>
-    <form class="target-date" action="#">
-      <input type="date" />
-      <button type="button">Set date</button>
-    </form>
+    <div class="conteiner">
+      <h1 class="title">Count down timer</h1>
+      <form class="target-date" action="#">
+        <input class="number" type="date" />
+        <button class="btn" data-action="start" type="button">
+          start timer
+        </button>
+        <button class="btn" data-action="stop" type="button">stop timer</button>
+      </form>
+      <section class="timer">
+        <div class="timer__group">
+          <div class="lable">
+            DAYS
+          </div>
+          <div class="number tenner">
+            0
+          </div>
+          <div class="number units">
+            0
+          </div>
+        </div>
+        <div class="timer__group">
+          <div class="lable">
+            HOURS
+          </div>
+          <div class="number tenner">
+            0
+          </div>
+          <div class="number units">
+            0
+          </div>
+        </div>
+        <div class="timer__group">
+          <div class="lable">
+            MINUTES
+          </div>
+          <div class="number tenner">
+            0
+          </div>
+          <div class="number units">
+            0
+          </div>
+        </div>
+        <div class="timer__group">
+          <div class="lable">
+            SECONDS
+          </div>
+          <div class="number tenner">
+            0
+          </div>
+          <div class="number units">
+            0
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>

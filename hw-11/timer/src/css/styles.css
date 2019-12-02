@@ -1,6 +1,12 @@
 html {
   font-size: 10px;
 }
+
+.conteiner {
+  width: 70%;
+  margin: 0 auto;
+}
+
 .title {
   text-align: center;
   font-size: 3rem;
@@ -8,5 +14,43 @@ html {
 
 .target-date {
   display: flex;
+  justify-content: space-around;
+}
+
+.number {
+  font-size: 7rem;
+  color: blue;
+  text-transform: uppercase;
+}
+
+.timer {
+  display: flex;
   justify-content: center;
+}
+
+.timer__group {
+  display: flex;
+  margin-right: 3rem;
+  justify-content: center;
+}
+
+.timer__group:last-child {
+  margin-right: 0;
+}
+
+.tenner {
+  padding: 1rem 0.2rem 1rem 1rem;
+}
+
+.units {
+  padding: 1rem 1rem 1rem 0.2rem;
+}
+
+.btn {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding: 1rem 3rem;
+}
+.lable {
+  font-size: 1.5rem;
 }
